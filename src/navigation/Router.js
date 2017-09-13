@@ -1,10 +1,11 @@
 // @flow
 import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import * as scenes from '../scenes'
+import { BrowserRouter } from 'react-router-dom'
+import { Layout } from './Layout'
+import { Routes } from './Routes'
 
 export const Router = () => <BrowserRouter>
-  <Switch>
-    <Route path='/' component={scenes.Home} />
-  </Switch>
+  <Layout>
+    <Routes />
+  </Layout>
 </BrowserRouter>
