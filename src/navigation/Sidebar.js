@@ -1,12 +1,14 @@
 // @flow
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { styles } from '../shared'
+import { stylesheet, mixins, values, colors } from '../shared/styles'
 
 export class Sidebar extends Component<*> {
   render () {
     return <div {...rules.sidebar}>
-      <div {...rules.icon} alt='purple square icon' />
+      <Link to='/'>
+        <div {...rules.icon} alt='purple square icon' />
+      </Link>
       <nav>
         <Link to='/'>Home</Link>
         <Link to='/blog'>Blog</Link>
@@ -16,23 +18,21 @@ export class Sidebar extends Component<*> {
   }
 }
 
-const rules = styles.sheet({
+const rules = stylesheet({
   sidebar: {
-    display: 'flex',
-    flexDirection: 'column',
-    padding: styles.values.spacing,
+    ...mixins.column,
+    padding: values.spacing,
     '> nav': {
-      display: 'flex',
-      flexDirection: 'column',
+      ...mixins.column,
       '> a + a': {
         marginTop: 5
       }
     }
   },
   icon: {
-    width: 45,
-    height: 45,
-    marginBottom: 15,
-    backgroundColor: styles.colors.purple
+    width: values.header,
+    height: values.header,
+    marginBottom: values.spacing,
+    backgroundColor: colors.purple
   }
 })

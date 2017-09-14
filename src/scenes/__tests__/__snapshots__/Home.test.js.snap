@@ -2,8 +2,13 @@
 
 exports[`#render renders properly 1`] = `
 <div
-  data-css-svxepe=""
+  data-css-tsigfw=""
 >
-  hello, world
+  <h1>
+    Hi, I'm Ty.
+  </h1>
+  <p>
+    I'm a mobile & web developer, and I'm most interested in using technology to tackle existing community/social/civic issues. I also like learning new things, games, and all that jazz.
+  </p>
 </div>
 `;

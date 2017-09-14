@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react'
 import { Sidebar } from './Sidebar'
-import { styles } from '../shared'
+import { stylesheet, mixins, values } from '../shared/styles'
 import type { Node } from 'react'
 
 export class Layout extends Component<*> {
@@ -19,11 +19,11 @@ export class Layout extends Component<*> {
   }
 }
 
-const rules = styles.sheet({
+const rules = stylesheet({
   container: {
-    display: 'flex'
+    ...mixins.row
   },
   content: {
-    padding: styles.values.spacing
+    padding: values.spacing
   }
 })

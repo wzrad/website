@@ -6,7 +6,7 @@ import type { RuleDefinition, RuleProp } from 'glamor'
 type RuleDefinitionMap = { [key: string]: RuleDefinition }
 type RulePropMap = { [key: string]: RuleProp }
 
-export function sheet (definitions: RuleDefinitionMap): RulePropMap {
+export function stylesheet (definitions: RuleDefinitionMap): RulePropMap {
   return reduce(definitions, (memo, definition, key) => {
     const def = defaults(definition, { label: key })
     memo[key] = css(def)

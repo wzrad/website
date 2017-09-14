@@ -1,19 +1,22 @@
 // @flow
 import React, { Component } from 'react'
-import { styles } from '../shared'
+import { stylesheet, mixins, values } from '../shared/styles'
 
 export class Home extends Component<*> {
   render () {
-    return <div {...rules.container}>
-      <h1>Hi I'm Ty.</h1>
+    return <div {...rules.home}>
+      <h1>Hi, I'm Ty.</h1>
       <p>I'm a mobile & web developer, and I'm most interested in using technology to tackle existing community/social/civic issues. I also like learning new things, games, and all that jazz.</p>
     </div>
   }
 }
 
-const rules = styles.sheet({
-  container: {
+const rules = stylesheet({
+  home: {
     '> h1': {
+      ...mixins.row,
+      alignItems: 'center',
+      height: values.header,
       marginBottom: 20
     }
   }
