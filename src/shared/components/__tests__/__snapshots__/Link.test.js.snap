@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#render renders properly 1`] = `
+<Link
+  data-css-d9uk9a=""
+  innerRef={[Function]}
+  onAnimationEnd={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  replace={false}
+  to="/test"
+  unanimated={false}
+/>
+`;
+
+exports[`#render renders properly when animating 1`] = `
+<Link
+  data-css-gasszt=""
+  innerRef={[Function]}
+  onAnimationEnd={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  replace={false}
+  to="/test"
+  unanimated={false}
+/>
+`;
+
+exports[`#render renders properly when ending animation 1`] = `
+<Link
+  data-css-vu44jq=""
+  innerRef={[Function]}
+  onAnimationEnd={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  replace={false}
+  to="/test"
+  unanimated={false}
+/>
+`;

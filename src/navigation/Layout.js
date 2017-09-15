@@ -21,7 +21,8 @@ export class Layout extends Component<*> {
 
 const rules = stylesheet({
   container: {
-    ...mixins.row
+    ...mixins.row,
+    height: '100vh'
   },
   content: {
     padding: values.spacing

@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from 'react'
-import { stylesheet, mixins, values } from '../shared/styles'
+import { stylesheet, mixins } from '../shared/styles'
 
 export class Home extends Component<*> {
   render () {
@@ -14,10 +14,7 @@ export class Home extends Component<*> {
 const rules = stylesheet({
   home: {
     '> h1': {
-      ...mixins.row,
-      alignItems: 'center',
-      height: values.header,
-      marginBottom: 20
+      ...mixins.header
     }
   }
 })

@@ -16,7 +16,7 @@ declare module 'glamor' {
 
   declare type Rule = RuleDefinition | RuleProp | EmptyRule;
 
-  // functons
+  // functions
   declare function css (...rules: Array<Rule>): RuleProp;
   declare function insertGlobal (selector: string, style: RuleDefinition): void;
 

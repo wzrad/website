@@ -63,13 +63,6 @@
     ],
     "ignore": [
       "flow-typed/"
-    ],
-    "globals": [
-      "fetch",
-      "requestAnimationFrame",
-      "Class",
-      "React$Element",
-      "React$Component"
     ]
   }
 }
