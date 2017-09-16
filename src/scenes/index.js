@@ -1,5 +1,5 @@
 // @flow
-export { Home } from './Home'
-export { Work } from './Work'
-export { Blog } from './Blog'
-export { Bikes } from './Bikes'
+export { home } from './home'
+export { work } from './work'
+export { blog } from './blog'
+export { bikes } from './bikes'
