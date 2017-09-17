@@ -43,14 +43,15 @@ theme({
     fontSize: 28
   },
   ' h2': {
-    fontSize: 24
+    fontSize: 24,
+    fontWeight: 'normal'
   },
   ' h3': {
     fontSize: 20
   },
   ' h4': {
     fontSize: 20,
-    fontWeight: 'regular'
+    fontWeight: 'normal'
   },
   ' h5': {
     fontSize: 16,

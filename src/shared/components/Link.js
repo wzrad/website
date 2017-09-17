@@ -77,7 +77,7 @@ export class Link extends Component<*, State> {
 
   // lifecycle
   render () {
-    const { to, style, ...otherProps } = this.props
+    const { to, style, unanimated: _, ...otherProps } = this.props
     const { color } = this.state
 
     const rule = css(
