@@ -4,7 +4,7 @@ import {
   BlogPosts as BPS,
   BlogPost as BP,
   useBlogPosts
-} from "../../Domain/BlogPosts"
+} from "@/Domain/BlogPosts"
 
 // -- impls --
 export function ShowBlog() {
