@@ -1,8 +1,6 @@
 {
   "defaultSeverity": "error",
-  "extends": [
-    "tslint:recommended"
-  ],
+  "extends": ["tslint:recommended", "tslint-config-prettier"],
   "rulesDirectory": [],
   "rules": {
     "callable-types": false,
@@ -12,15 +10,15 @@
     "max-line-length": false,
     "member-access": [true, "no-public"],
     "member-ordering": false,
-    "no-bitwise": false,
     "no-console": false,
     "no-empty": false,
     "no-empty-interface": false,
     "no-namespace": false,
     "no-shadowed-variable": false,
     "no-unused-expression": [true, "allow-fast-null-checks"],
+    "no-bitwise": false,
     "object-literal-sort-keys": false,
-    "only-arrow-functions": [true, "allow-named-functions"],
+    "only-arrow-functions": false,
     "ordered-imports": false,
     "quotemark": [true, "double", "avoid-escape"],
     "semicolon": [true, "never"],
