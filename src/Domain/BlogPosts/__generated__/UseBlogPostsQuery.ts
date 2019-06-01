@@ -14,8 +14,9 @@ export interface UseBlogPostsQuery_allMarkdownRemark_nodes_frontmatter {
 
 export interface UseBlogPostsQuery_allMarkdownRemark_nodes {
   __typename: "MarkdownRemark";
-  frontmatter: UseBlogPostsQuery_allMarkdownRemark_nodes_frontmatter | null;
+  id: string;
   excerpt: string | null;
+  frontmatter: UseBlogPostsQuery_allMarkdownRemark_nodes_frontmatter | null;
 }
 
 export interface UseBlogPostsQuery_allMarkdownRemark {

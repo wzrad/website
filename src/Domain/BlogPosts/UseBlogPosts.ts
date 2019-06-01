@@ -6,11 +6,12 @@ export function useBlogPosts() {
     query UseBlogPostsQuery {
       allMarkdownRemark {
         nodes {
+          id
+          excerpt
           frontmatter {
             title
             date
           }
-          excerpt
         }
         totalCount
       }

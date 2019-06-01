@@ -4,14 +4,18 @@ import { UseBlogPostsQuery_allMarkdownRemark_nodes } from "./__generated__/UseBl
 export interface IBlogPost extends UseBlogPostsQuery_allMarkdownRemark_nodes {}
 
 // -- impls --
-export function getTitle(post: IBlogPost) {
+export function id(post: IBlogPost) {
+  return post.id
+}
+
+export function title(post: IBlogPost) {
   return post.frontmatter && post.frontmatter.title
 }
 
-export function getDate(post: IBlogPost) {
+export function date(post: IBlogPost) {
   return post.frontmatter && post.frontmatter.date
 }
 
-export function getExcerpt(post: IBlogPost) {
+export function excerpt(post: IBlogPost) {
   return post.excerpt
 }

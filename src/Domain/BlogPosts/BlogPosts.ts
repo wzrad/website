@@ -5,8 +5,8 @@ import { IBlogPost } from "./BlogPost"
 export interface IBlogPosts extends UseBlogPostsQuery {}
 
 // -- impls --
-export function getPosts(posts: IBlogPosts): IBlogPost[] {
-  const connection = posts.allMarkdownRemark
+export function posts(data: IBlogPosts): IBlogPost[] {
+  const connection = data.allMarkdownRemark
   if (connection == null) {
     return []
   }

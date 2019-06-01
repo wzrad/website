@@ -9,15 +9,22 @@
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@R/*": ["resources/*"]
     },
     "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
-    "strict": true
+    "strict": true,
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin",
+        "lint": { "fontFaceProperties": "ignore" }
+      }
+    ]
   },
-  "include": ["./src/**/*"],
+  "include": ["./globals.d.ts", "./src/**/*"],
   "compileOnSave": false
 }
