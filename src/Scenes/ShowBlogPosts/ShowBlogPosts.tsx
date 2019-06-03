@@ -1,7 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { BlogPost as BP } from "@/Domain/BlogPost"
+import css from "@emotion/css"
 import { Layout } from "@/Ui/Layout"
+import * as S from "@/Ui/Styles"
 import { BlogPostView } from "@/Ui/Views/BlogPost"
 import {
   ShowBlogPostsQuery,
@@ -33,7 +34,7 @@ export function ShowBlogPosts({ data }: IProps) {
 
   return (
     <Layout>
-      <section>
+      <section css={kStyles.posts}>
         {data.posts.nodes.map((post) => (
           <BlogPostView key={getKey(post)} post={post} slug={getSlug(post)} />
         ))}
@@ -58,3 +59,12 @@ export const _ = graphql`
     }
   }
 `
+
+// -- styles --
+const kStyles = {
+  posts: css`
+    article + article {
+      margin-top: ${S.kSpacing2};
+    }
+  `
+}

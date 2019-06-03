@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
 import { css, Global } from "@emotion/core"
-import { kResets, kTheme, kSpacing2, kColorPrimary } from "@/Ui/Styles"
+import * as S from "@/Ui/Styles"
 
 // -- types --
 interface IProps {
@@ -13,12 +13,14 @@ export function Layout({ children }: IProps) {
     <>
       <Global
         styles={css`
-          ${kResets}
-          ${kTheme}
+          ${S.kResets}
+          ${S.kTheme}
         `}
       />
-      <main css={kMain}>
-        <h1 css={kTitle}>Ty's site</h1>
+      <main css={kStyles.main}>
+        <header css={kStyles.header}>
+          <h1>Ty's site</h1>
+        </header>
         {children}
       </main>
     </>
@@ -26,10 +28,12 @@ export function Layout({ children }: IProps) {
 }
 
 // -- styles --
-const kMain = css`
-  padding: ${kSpacing2};
-`
-
-const kTitle = css`
-  color: ${kColorPrimary};
-`
+const kStyles = {
+  main: css`
+    padding: ${S.kSpacing1};
+  `,
+  header: css`
+    color: ${S.kColorPrimary};
+    margin-bottom: ${S.kSpacing3};
+  `
+}
