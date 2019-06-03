@@ -1,14 +1,11 @@
-const path = require("path")
+// bootstrap ts-node
+require("source-map-support").install()
+require("ts-node").register({
+  compilerOptions: {
+    module: "commonjs",
+    target: "es2017"
+  }
+})
 
-exports.onCreateWebpackConfig = ({ actions }) => {
-  console.log("it's hapenning!", path.resolve(__dirname, "src"))
-
-  actions.setWebpackConfig({
-    resolve: {
-      alias: {
-        "@": path.resolve(__dirname, "src"),
-        "@R": path.resolve(__dirname, "resources")
-      }
-    }
-  })
-}
+// re-export the ts config
+module.exports = require("./config").default

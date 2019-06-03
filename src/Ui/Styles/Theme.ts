@@ -22,7 +22,7 @@ export const kTheme = css`
 
   h2 {
     ${kFontMediumSerif};
-    font-size: 50px;
+    font-size: 32px;
     line-height: 1;
   }
 
