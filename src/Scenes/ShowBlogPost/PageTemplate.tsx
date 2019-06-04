@@ -2,7 +2,8 @@ import { graphql } from "gatsby"
 
 // -- impls --
 // -- impls/scene
-export { ShowBlogPost as default } from "./ShowBlogPost"
+import { ShowBlogPost } from "./ShowBlogPost"
+export default ShowBlogPost
 
 // -- impls/graphql
 export const query = graphql`

@@ -1,1 +1,2 @@
-export { Show404 as default } from "@/Scenes/Show404"
+import { Show404 } from "@/Scenes/Show404"
+export default Show404
