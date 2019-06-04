@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Layout } from "@/Ui/Layout"
-import { BlogPostView } from "@/Ui/Views/BlogPost"
+import { BlogPostView } from "@/Features/BlogPost"
 import { ShowBlogPostQuery } from "./__generated__/ShowBlogPostQuery"
 
 // -- types --

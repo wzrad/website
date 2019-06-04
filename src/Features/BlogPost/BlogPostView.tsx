@@ -1,12 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 import css from "@emotion/css"
-import { IBlogPost, BlogPost as BP } from "@/Domain/BlogPost"
 import * as S from "@/Ui/Styles"
+import * as BP from "./BlogPost"
 
 // -- types --
 interface IProps {
-  post: IBlogPost
+  post: BP.IBlogPost
   slug?: string | null
 }
 
@@ -43,6 +43,10 @@ const kStyles = {
 
     p {
       margin-bottom: 10px;
+    }
+
+    em {
+      font-style: italic;
     }
   `,
   date: css`

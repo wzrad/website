@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import css from "@emotion/css"
 import { Layout } from "@/Ui/Layout"
 import * as S from "@/Ui/Styles"
-import { BlogPostView } from "@/Ui/Views/BlogPost"
+import { BlogPostView } from "@/Features/BlogPost"
 import {
   ShowBlogPostsQuery,
   ShowBlogPostsQuery_posts_nodes
