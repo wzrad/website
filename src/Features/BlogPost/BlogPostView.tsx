@@ -21,7 +21,7 @@ export function BlogPostView({ post, slug }: IProps) {
           <Link to={slug}>{BP.title(post)}</Link>
         )}
       </h2>
-      <p
+      <div
         css={kStyles.body}
         dangerouslySetInnerHTML={{ __html: BP.body(post) || "" }}
       />
