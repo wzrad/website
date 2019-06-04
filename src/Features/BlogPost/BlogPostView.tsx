@@ -46,7 +46,7 @@ const kStyles = {
     }
 
     em {
-      font-style: italic;
+      ${S.kFontRegularItalic}
     }
   `,
   date: css`

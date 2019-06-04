@@ -1,11 +1,9 @@
 import css from "@emotion/css"
-import { kFontRegular, kFontMediumSerif } from "./Fonts"
 import { kColorRainbow } from "./Constants"
+import { kFontRegular, kFontMediumSerif } from "./Fonts"
 
 // -- resources --
 import EczarMedium from "@R/Fonts/Eczar-Medium.woff2"
-import OpenSansRegular from "@R/Fonts/OpenSans-Regular.woff2"
-import OpenSansRegularItalic from "@R/Fonts/OpenSans-RegularItalic.woff2"
 
 // -- impls --
 // prettier-ignore
@@ -44,23 +42,12 @@ export const kTheme = css`
 
   /* -- impls/fonts */
   @font-face {
-    ${kFontMediumSerif}
+    font-family: Eczar;
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
     src: local("Eczar Medium"), local("Eczar-Medium"), url(${EczarMedium}) format("woff2");
   }
-
-  @font-face {
-    ${kFontRegular}
-    font-style: normal;
-    font-display: swap;
-    src: local("Open Sans Regular"), local("OpenSans-Regular"), url(${OpenSansRegular}) format("woff2");
-  }
-
-  @font-face {
-    ${kFontRegular}
-    font-style: italic;
-    font-display: swap;
-    src: local("Open Sans Italic"), local("OpenSans-Italic"), url(${OpenSansRegularItalic}) format("woff2");
-  }
 `
+
+export { EczarMedium }

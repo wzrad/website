@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react"
+import { Helmet } from "react-helmet"
 import { css, Global } from "@emotion/core"
 import * as S from "@/Ui/Styles"
 
@@ -17,9 +18,19 @@ export function Layout({ children }: IProps) {
           ${S.kTheme}
         `}
       />
+      <Helmet>
+        <title>Ty's Site</title>
+        <link
+          rel="preload"
+          as="font"
+          href={S.EczarMedium}
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </Helmet>
       <main css={kStyles.main}>
         <header css={kStyles.header}>
-          <h1>Ty's site</h1>
+          <h1>Ty's Site</h1>
         </header>
         {children}
       </main>

@@ -10,13 +10,14 @@ const plugins = {
 
 module.exports = {
   siteMetadata: {
-    title: "Website."
+    title: "Ty's Site"
   },
   plugins: [
     plugins.posts,
     "gatsby-plugin-typescript",
     "gatsby-plugin-preact",
     "gatsby-plugin-emotion",
+    "gatsby-plugin-react-helmet",
     "gatsby-transformer-remark"
   ]
 }
