@@ -8,6 +8,3 @@ node_modules/
 .cache/
 dist
 public
-
-# fonts
-resources/fonts
