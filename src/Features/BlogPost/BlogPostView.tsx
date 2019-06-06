@@ -52,11 +52,24 @@ const kStyles = {
       padding-left: ${S.kSpacing4};
       border-left: 2px solid ${S.kColorPrimary};
     }
+
+    aside {
+      padding: ${S.kSpacing4};
+      background-color: ${S.kColorGray3};
+
+      h6 {
+        color: ${S.kColorGray1};
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
   `,
   body: css`
     margin-bottom: ${S.kSpacing4};
   `,
   date: css`
-    color: ${S.kColorGray1};
+    color: ${S.kColorGray2};
   `
 }

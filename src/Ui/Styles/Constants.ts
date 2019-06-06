@@ -1,7 +1,9 @@
 // -- impls --
 // -- impls/colors
 export const kColorBlack = "#000000"
-export const kColorGray1 = "#777777"
+export const kColorGray1 = "#555555"
+export const kColorGray2 = "#777777"
+export const kColorGray3 = "#F3F3F3"
 
 export const kColorPrimary = "#AA3312"
 export const kColorRainbow = [
