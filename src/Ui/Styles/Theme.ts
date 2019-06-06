@@ -1,5 +1,5 @@
 import css from "@emotion/css"
-import { kColorRainbow } from "./Constants"
+import { kColorRainbow, kColorPrimary } from "./Constants"
 import { kFontRegular, kFontMediumSerif } from "./Fonts"
 
 // -- resources --
@@ -28,7 +28,12 @@ export const kTheme = css`
   }
 
   /* -- impls/links */
+  a {
+    text-decoration-color: ${kColorPrimary};
+  }
+
   a:hover {
+    text-decoration-color: initial;
     animation: a-rainbow 2.0s infinite forwards;
   }
 
