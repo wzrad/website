@@ -2,14 +2,20 @@ import React, { ReactNode } from "react"
 import { Helmet } from "react-helmet"
 import { css, Global } from "@emotion/core"
 import * as S from "@/Ui/Styles"
+import { Link } from "gatsby"
 
 // -- types --
 interface IProps {
+  isRoot?: boolean
   children: ReactNode
 }
 
 // -- impls --
-export function Layout({ children }: IProps) {
+export function Layout({ isRoot, children }: IProps) {
+  // -- impls/locals
+  const title = "Ty's Site"
+
+  // -- impls/view
   return (
     <>
       <Global
@@ -19,7 +25,7 @@ export function Layout({ children }: IProps) {
         `}
       />
       <Helmet>
-        <title>Ty's Site</title>
+        <title>{title}</title>
         <link
           rel="preload"
           as="font"
@@ -30,7 +36,7 @@ export function Layout({ children }: IProps) {
       </Helmet>
       <main css={kStyles.main}>
         <header css={kStyles.header}>
-          <h1>Ty's Site</h1>
+          <h1>{isRoot ? title : <Link to="/">{title}</Link>}</h1>
         </header>
         {children}
       </main>

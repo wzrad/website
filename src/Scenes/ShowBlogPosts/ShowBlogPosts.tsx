@@ -33,7 +33,7 @@ export function ShowBlogPosts({ data }: IProps) {
   }
 
   return (
-    <Layout>
+    <Layout isRoot>
       <section css={kStyles.posts}>
         {data.posts.nodes.map((post) => (
           <BlogPostView key={getKey(post)} post={post} slug={getSlug(post)} />
