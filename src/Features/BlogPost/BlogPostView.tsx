@@ -14,13 +14,13 @@ interface IProps {
 export function BlogPostView({ post, slug }: IProps) {
   return (
     <article css={kStyles.post}>
-      <h2 css={kStyles.title}>
+      <h1>
         {slug == null ? (
           BP.title(post)
         ) : (
           <Link to={slug}>{BP.title(post)}</Link>
         )}
-      </h2>
+      </h1>
       <div
         css={kStyles.body}
         dangerouslySetInnerHTML={{ __html: BP.body(post) || "" }}
@@ -34,20 +34,27 @@ export function BlogPostView({ post, slug }: IProps) {
 const kStyles = {
   post: css`
     max-width: 700px;
-  `,
-  title: css`
-    margin-bottom: ${S.kSpacing4};
-  `,
-  body: css`
-    margin-bottom: ${S.kSpacing4};
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: ${S.kSpacing4};
+    }
 
     p {
-      margin-bottom: 10px;
+      margin-bottom: ${S.kSpacing4};
     }
 
     em {
       ${S.kFontRegularItalic}
     }
+
+    blockquote {
+      padding-left: ${S.kSpacing4};
+      border-left: 2px solid ${S.kColorPrimary};
+    }
+  `,
+  body: css`
+    margin-bottom: ${S.kSpacing4};
   `,
   date: css`
     color: ${S.kColorGray1};
