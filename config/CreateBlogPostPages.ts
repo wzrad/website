@@ -9,11 +9,18 @@ export const CreateBlogPostPages: GatsbyNode = {
     // if this is a blog post
     if (node.internal.type === "MarkdownRemark") {
       // generate a url slug for the post
-      const slug = createFilePath({
+      const path = createFilePath({
         node,
         getNode,
         basePath: "content/posts"
       })
+
+      const slug = resolve(
+        "/blog",
+        path.slice(1, 3), // year
+        path.slice(4, 6), // month
+        path.slice(10) // name
+      )
 
       // add that slug to the data node as a field
       actions.createNodeField({
