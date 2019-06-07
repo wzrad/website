@@ -14,6 +14,6 @@ I'm consistently surprised by how much letting go of my body and sinking into a 
 <aside>
   <h6>Today's <a href="/blog/19/06/refining-questions/">questions</a>:</h6>
   <ul>
-    <li>How do I want to feel and how do I get there?</li>
+    <li>How do I want to feel, and how do I get there?</li>
   </ul>
 </aside>
