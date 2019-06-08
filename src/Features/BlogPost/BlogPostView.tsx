@@ -60,10 +60,6 @@ const kStyles = {
       h6 {
         color: ${S.kColorGray1};
       }
-
-      p {
-        margin-bottom: 0;
-      }
     }
   `,
   body: css`
