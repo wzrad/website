@@ -6,12 +6,11 @@ import { Header } from "./Header"
 
 // -- types --
 interface IProps {
-  isRoot?: boolean
   children: ReactNode
 }
 
 // -- impls --
-export function Layout({ isRoot, children }: IProps) {
+export function Layout({ children }: IProps) {
   // -- impls/locals
   const title = "Ty's Site"
 
@@ -35,7 +34,7 @@ export function Layout({ isRoot, children }: IProps) {
         />
       </Helmet>
       <main css={kStyles.main}>
-        <Header title={title} isRoot={isRoot} />
+        <Header title={title} />
         {children}
       </main>
     </>

@@ -1,17 +1,16 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { css } from "@emotion/core"
 import * as S from "@/Ui/Styles"
-import { Link } from "gatsby"
 import { useSessionFlag } from "@/Core/Storage"
+import { NavLink } from "./NavLink"
 
 // -- types --
 interface IProps {
   title: string
-  isRoot?: boolean
 }
 
 // -- impls --
-export function Header({ title, isRoot }: IProps) {
+export function Header({ title }: IProps) {
   // -- impls/model
   const hasSeenPeek = useSessionFlag("has-seen-peek")
 
@@ -19,18 +18,18 @@ export function Header({ title, isRoot }: IProps) {
   return (
     <header css={kStyles.header}>
       <h1 css={kStyles.title}>
-        {isRoot ? title : <Link to="/">{title}</Link>}
+        <NavLink to="/">{title}</NavLink>
       </h1>
       <div css={kStyles.menu}>
-        <input type="checkbox" id="menu" />
+        <input type="checkbox" id="menu" name="menu" />
         <label css={kStyles.menuButton} htmlFor="menu">
           <a>⌘</a>
         </label>
         <nav
           css={[kStyles.menuNav, hasSeenPeek === false && kStyles.menuNavPeek]}
         >
-          <Link to="/">Blog</Link>
-          <Link to="/about">About</Link>
+          <NavLink to="/">Blog</NavLink>
+          <NavLink to="/about">About</NavLink>
         </nav>
       </div>
     </header>
@@ -73,7 +72,7 @@ const kStyles = (() => {
       }
 
       input[id="menu"]:checked ~ label {
-        color: ${S.kColorPrimary};
+        color: ${S.kColorSecondary};
       }
 
       nav {
@@ -90,6 +89,7 @@ const kStyles = (() => {
       ${S.kTextSection};
       z-index: 1;
       user-select: none;
+      padding-top: 3px; /* center icon a bit better */
 
       > a {
         display: block;
