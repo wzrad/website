@@ -1,6 +1,6 @@
 import css from "@emotion/css"
-import { kColorRainbow, kColorPrimary } from "./Constants"
-import { kFontRegular, kFontMediumSerif } from "./Fonts"
+import { kColorRainbow, kColorPrimary, kColorWhite } from "./Constants"
+import { kTextBody, kTextArticle, kTextSection } from "./Fonts"
 
 // -- resources --
 import EczarMedium from "@R/Fonts/Eczar-Medium.woff2"
@@ -8,27 +8,23 @@ import EczarMedium from "@R/Fonts/Eczar-Medium.woff2"
 // -- impls --
 // prettier-ignore
 export const kTheme = css`
-  /* -- impls/type */
+  /* -- impls/text */
   body {
-    ${kFontRegular}
-    font-size: 14px;
-    line-height: 1.5;
+    ${kTextBody};
+    background-color: ${kColorWhite};
   }
 
   h1 {
-    ${kFontMediumSerif};
-    font-size: 42px;
-    line-height: 1;
+    ${kTextArticle};
   }
 
   h2 {
-    ${kFontMediumSerif};
-    font-size: 32px;
-    line-height: 1;
+    ${kTextSection};
   }
 
   /* -- impls/links */
   a {
+    cursor: pointer;
     text-decoration-color: ${kColorPrimary};
   }
 
