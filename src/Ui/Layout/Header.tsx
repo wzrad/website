@@ -22,7 +22,7 @@ export function Header({ title }: IProps) {
     if (input.current != null) {
       input.current.checked = isOpen.get()
     }
-  })
+  }, [])
 
   // -- impls/view
   return (

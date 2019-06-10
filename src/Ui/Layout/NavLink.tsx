@@ -16,6 +16,7 @@ export function NavLink(props: IProps) {
       {({ css }) => (
         <Link
           {...props}
+          partiallyActive={props.to !== "/"}
           activeClassName={css`
             color: ${S.kColorPrimary};
             pointer-events: none;
