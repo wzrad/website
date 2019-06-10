@@ -1,7 +1,7 @@
-import React from "react"
+import React, { useRef, useLayoutEffect } from "react"
 import { css } from "@emotion/core"
 import * as S from "@/Ui/Styles"
-import { useSessionFlag } from "@/Core/Storage"
+import { Session, useAutoSetFlag } from "@/Core/Session"
 import { NavLink } from "./NavLink"
 
 // -- types --
@@ -12,7 +12,17 @@ interface IProps {
 // -- impls --
 export function Header({ title }: IProps) {
   // -- impls/model
-  const hasSeenPeek = useSessionFlag("has-seen-peek")
+  const isOpen = Session.focusBoolean("nav/is-open")
+  const hasSeenPeek = useAutoSetFlag("nav/has-seen-peek")
+
+  // -- impls/refs
+  // preserve checked state per-session
+  const input = useRef<HTMLInputElement>(null)
+  useLayoutEffect(() => {
+    if (input.current != null) {
+      input.current.checked = isOpen.get()
+    }
+  })
 
   // -- impls/view
   return (
@@ -21,7 +31,14 @@ export function Header({ title }: IProps) {
         <NavLink to="/">{title}</NavLink>
       </h1>
       <div css={kStyles.menu}>
-        <input type="checkbox" id="menu" name="menu" />
+        <input
+          ref={input}
+          type="checkbox"
+          id="menu"
+          onChange={(event) => {
+            isOpen.set(event.target.checked)
+          }}
+        />
         <label css={kStyles.menuButton} htmlFor="menu">
           <a>⌘</a>
         </label>
@@ -106,20 +123,17 @@ const kStyles = (() => {
       }
     `,
     menuNavPeek: css`
-      animation: a-menu-nav-peek 1s 0.5s;
+      animation: a-menu-nav-peek 2s 0.5s;
 
       @keyframes a-menu-nav-peek {
-        33% {
-          left: ${S.kSpacing4};
-          opacity: 1;
+        20% {
+          ${visible};
         }
-        66% {
-          left: ${S.kSpacing4};
-          opacity: 1;
+        80% {
+          ${visible};
         }
         100% {
-          left: 0;
-          opacity: 0;
+          ${hidden};
         }
       }
     `
