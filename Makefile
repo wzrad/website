@@ -17,7 +17,7 @@ tools-apollo   = apollo
 init: init/pre init/base
 .PHONY: init
 
-# -- init/helpers --
+# -- init/helpers
 # need to use global apollo for now, see:
 #	- https://github.com/apollographql/apollo-tooling/issues/881
 init/base:

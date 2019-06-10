@@ -36,7 +36,6 @@ const kStyles = {
     max-width: 700px;
 
     h1 {
-      font-size: 32px;
       margin-bottom: ${S.kSpacing4};
     }
 

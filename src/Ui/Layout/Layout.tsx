@@ -2,16 +2,15 @@ import React, { ReactNode } from "react"
 import { Helmet } from "react-helmet"
 import { css, Global } from "@emotion/core"
 import * as S from "@/Ui/Styles"
-import { Link } from "gatsby"
+import { Header } from "./Header"
 
 // -- types --
 interface IProps {
-  isRoot?: boolean
   children: ReactNode
 }
 
 // -- impls --
-export function Layout({ isRoot, children }: IProps) {
+export function Layout({ children }: IProps) {
   // -- impls/locals
   const title = "Ty's Site"
 
@@ -35,9 +34,7 @@ export function Layout({ isRoot, children }: IProps) {
         />
       </Helmet>
       <main css={kStyles.main}>
-        <header css={kStyles.header}>
-          <h1>{isRoot ? title : <Link to="/">{title}</Link>}</h1>
-        </header>
+        <Header title={title} />
         {children}
       </main>
     </>
@@ -48,9 +45,5 @@ export function Layout({ isRoot, children }: IProps) {
 const kStyles = {
   main: css`
     padding: ${S.kSpacing1};
-  `,
-  header: css`
-    color: ${S.kColorPrimary};
-    margin-bottom: ${S.kSpacing3};
   `
 }
