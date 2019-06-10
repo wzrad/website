@@ -18,6 +18,7 @@ module.exports = {
     "gatsby-plugin-preact",
     "gatsby-plugin-emotion",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-netlify",
     "gatsby-transformer-remark"
   ]
 }
