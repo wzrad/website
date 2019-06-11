@@ -96,10 +96,16 @@ const kStyles = (() => {
         ${hidden}
       }
 
-      input[id="menu"]:checked ~ nav,
-      &:hover > nav {
+      input[id="menu"]:checked ~ nav {
         ${visible}
         animation-iteration-count: 0;
+      }
+
+      @media (pointer: fine) {
+        &:hover > nav {
+          ${visible}
+          animation-iteration-count: 0;
+        }
       }
     `,
     menuButton: css`
@@ -110,6 +116,12 @@ const kStyles = (() => {
 
       > a {
         display: block;
+
+        @media (pointer: coarse) {
+          &:hover {
+            animation: none;
+          }
+        }
       }
     `,
     menuNav: css`
