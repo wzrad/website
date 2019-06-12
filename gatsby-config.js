@@ -15,7 +15,6 @@ module.exports = {
   plugins: [
     plugins.posts,
     "gatsby-plugin-typescript",
-    "gatsby-plugin-preact",
     "gatsby-plugin-emotion",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-netlify",
