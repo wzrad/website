@@ -3,7 +3,7 @@ title: "Unintended Consequences"
 date: "2019-06-11"
 ---
 
-_I'm publishing this post on the 12th, but I wrote it in my head yesterday. And it's about yesterday. Whatever, I'm redefining what "daily" means, and I'm perfectly comfortable with it._
+_I'm publishing this post on the 12th, but I wrote it in my head yesterday. And it's about yesterday. Whatever, we've redefined "daily", and I'm perfectly comfortable with it._
 
 I went for a bike ride to the Chicago Botanic Gardens today. I want to do a longer ride every two weeks while it's summer and I'm unemployed. When I left in the morning, I realized that I didn't have a water bottle. I own two sport bottles, but they were nowhere to be found. I have of trouble keeping track of things., especially things I don't use frequently.
 
