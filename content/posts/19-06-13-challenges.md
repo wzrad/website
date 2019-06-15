@@ -12,7 +12,6 @@ Even though I didn't finish, I did start, and the challenge ended up both aligni
 <aside>
   <h6>Today's <a href="/blog/19/06/refining-questions/">questions</a>:</h6>
   <ul>
-    <li>How can I encourage myself to take a small step towards something new each day?</li>
-    <li>Should I table my current book to read <a href="https://designingyour.life/the-book/">something</a> <a href="https://www.nytimes.com/2019/04/30/books/review/jenny-odell-how-to-do-nothing.html">else</a>?</li>
+    <li>How can I remember to accept where I am today, in addition to looking forward?</li>
   </ul>
 </aside>
