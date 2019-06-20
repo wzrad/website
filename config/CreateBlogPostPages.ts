@@ -15,11 +15,14 @@ export const CreateBlogPostPages: GatsbyNode = {
         basePath: "content/posts"
       })
 
+      console.log(path)
+      console.log(path.slice(10, -6))
+
       const slug = resolve(
         "/blog",
         path.slice(1, 3), // year
         path.slice(4, 6), // month
-        path.slice(10) // name
+        path.slice(10, -6) // name
       )
 
       // add that slug to the data node as a field

@@ -35,24 +35,38 @@ const kStyles = {
   post: css`
     max-width: 700px;
 
-    h1 {
+    > h1 {
       margin-bottom: ${S.kSpacing4};
     }
+  `,
+  body: css`
+    margin-bottom: ${S.kSpacing4};
 
-    p {
+    > p {
       margin-bottom: ${S.kSpacing4};
+
+      em {
+        ${S.kFontRegularItalic}
+      }
     }
 
-    em {
-      ${S.kFontRegularItalic}
+    > ul {
+      display: flex;
+      margin-top: ${S.kSpacing3};
+      margin-bottom: ${S.kSpacing3};
+
+      li {
+        flex: 1;
+      }
     }
 
-    blockquote {
+    > blockquote {
+      margin-bottom: ${S.kSpacing4};
       padding-left: ${S.kSpacing4};
       border-left: 2px solid ${S.kColorPrimary};
     }
 
-    aside {
+    > aside {
       padding: ${S.kSpacing4};
       background-color: ${S.kColorGray3};
 
@@ -60,9 +74,6 @@ const kStyles = {
         color: ${S.kColorGray1};
       }
     }
-  `,
-  body: css`
-    margin-bottom: ${S.kSpacing4};
   `,
   date: css`
     color: ${S.kColorGray2};
