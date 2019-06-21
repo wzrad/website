@@ -8,7 +8,7 @@ It's late on a Sunday night, I haven't gotten around to writing a blog post, and
 On personal projects, discipline and prioritizing time-sensitive tasks (in this case, writing today's post) remain are a challenge for me. In order to keep pace, I imagine one mitigating strategy might be to write a few posts at once when time, energy, and ideas permit. And I'd bet this situation does happen again, because life.
 
 <aside>
-  <h6>Today's <a href="/blog/19/06/refining-questions/">questions</a>:</h6>
+  <h6>Today's <a href="/blog/19/06/refining-questions/">Questions</a>:</h6>
   <ul>
     <li>How can I keep track of my questions and stop doing this post-hoc?</li>
   </ul>

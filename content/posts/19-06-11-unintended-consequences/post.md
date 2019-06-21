@@ -18,7 +18,7 @@ I _did_ eventually make it. The bike shop had my wallet and their phone system h
 A lot of nice things happened today that otherwise may not have, if not for a series of compounding errors triggered by my failure to keep track of my water bottles.
 
 <aside>
-  <h6>Today's <a href="/blog/19/06/refining-questions/">questions</a>:</h6>
+  <h6>Today's <a href="/blog/19/06/refining-questions/">Questions</a>:</h6>
   <ul>
     <li>How can I re-frame my feelings when enthusiasm/momentum starts flagging?</li>
   </ul>

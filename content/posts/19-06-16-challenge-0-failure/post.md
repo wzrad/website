@@ -10,7 +10,7 @@ Despite this blog _helping_ me overcome my fear of [sharing my thoughts](/blog/1
 This is a self-centered lens. Failure is something that I need to embrace, not only for my own growth, but to demonstrate humanity and fallibilty to those close to me. To everyone, really. To err alongside them. We all deserve the courage to fail, knowing that others will still accept us. I need the courage to fail publicly and the confidence that I'll still be accepted for myself, but also to help others find that same courage and confidence.
 
 <aside>
-  <h6>Today's <a href="/blog/19/06/refining-questions/">questions</a>:</h6>
+  <h6>Today's <a href="/blog/19/06/refining-questions/">Questions</a>:</h6>
   <ul>
     <li>After today, how can I continue to find bravery and share it with others?</li>
   </ul>

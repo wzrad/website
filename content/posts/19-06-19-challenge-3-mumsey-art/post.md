@@ -19,7 +19,7 @@ The three of them now live out on a farm in Michigan, and I've never seen Mumsey
 That drawing is on a sketchbook page and hard to hand someone. I wanted to make something on proper paper that I could give to Kim & Wes, so I also did a portrait on Mumsey in a medium and style I'm more comfortable with.
 
 <aside>
-  <h6>Today's <a href="/blog/19/06/refining-questions/">questions</a>:</h6>
+  <h6>Today's <a href="/blog/19/06/refining-questions/">Questions</a>:</h6>
   <ul>
     <li>How can I show gratitude? To everyone who has given me a challenge?</li>
   </ul>

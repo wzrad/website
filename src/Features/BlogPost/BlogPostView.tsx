@@ -42,12 +42,12 @@ const kStyles = {
   body: css`
     margin-bottom: ${S.kSpacing4};
 
-    > p {
-      margin-bottom: ${S.kSpacing4};
+    em {
+      ${S.kFontRegularItalic}
+    }
 
-      em {
-        ${S.kFontRegularItalic}
-      }
+    > * + * {
+      margin-top: ${S.kSpacing4};
     }
 
     > .image-grid {
@@ -67,7 +67,6 @@ const kStyles = {
     }
 
     > blockquote {
-      margin-bottom: ${S.kSpacing4};
       padding-left: ${S.kSpacing4};
       border-left: 2px solid ${S.kColorPrimary};
     }

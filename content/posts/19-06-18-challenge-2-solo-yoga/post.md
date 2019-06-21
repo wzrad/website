@@ -14,7 +14,7 @@ I went to the noon class at Tula Yoga in Logan Square (Balanced Vinyassa). The i
 I've had issues recently with my emotions manifesting in physical distress (as well as general problems wiht my [knees](/blog/19/06/unintended-consequences/)), and it was helpful to allow myself to be guided by her words. That afternoon after class, I was finally able to go out and make a breakthrough on challenge #1. Post still forthcoming.
 
 <aside>
-  <h6>Today's <a href="/blog/19/06/refining-questions/">questions</a>:</h6>
+  <h6>Today's <a href="/blog/19/06/refining-questions/">Questions</a>:</h6>
   <ul>
     <li>How do I maintain momentum after breaking through a wall?</li>
   </ul>

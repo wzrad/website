@@ -14,7 +14,7 @@ It does, however, provide extremely valuable signal. It's a tool that helps me n
 Treating skepticism this way tips the scales towards construction. Towards a world where we build on each other's ideas, rather then trap ourselves in dismissive death spirals. I focused so hard on the "should be" in Hodgell's quote that I forgot to consider the implications of its core activity, "destroyed". It was there under my nose the whole time.
 
 <aside>
-  <h6>Today's <a href="/blog/19/06/refining-questions/">questions</a>:</h6>
+  <h6>Today's <a href="/blog/19/06/refining-questions/">Questions</a>:</h6>
   <ul>
     <li>What are some ways I can reset, if I notice a situation going awry?</li>
   </ul>

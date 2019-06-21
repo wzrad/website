@@ -16,7 +16,7 @@ This argument seems too obviously bad, so I went searching for something to pull
 Having a heuristic is always handy. I've definitely been struggling with "I"-overload in these posts. Writing, perhaps more than many arts, does need to consider form. Without form, reading becomes tedious. It's not fun anymore, and it's easier to lose interest. Who wants that? Not I.
 
 <aside>
-  <h6>Today's <a href="/blog/19/06/refining-questions/">questions</a>:</h6>
+  <h6>Today's <a href="/blog/19/06/refining-questions/">Questions</a>:</h6>
   <ul>
     <li>How can I let others' experiences inform how I think about what's next for me?</li>
     <li>How can I make a list of my questions, as originally stated, so that I can iterate?</li>

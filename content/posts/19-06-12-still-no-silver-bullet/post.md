@@ -10,7 +10,7 @@ I think it's a warning worth re-iterating, because it's one that's so easy (for 
 Unsurprisingly, starting all those habits was harder than I thought. Many of my struggles while working continue to be struggles while not, even with more time an energy available. The essential complexity is in my brain. There are many habits, like keeping a planner or reading every night, that I haven't found yet. I bought a planner two weeks ago and have a book by my bedside, which _is_ a start, but the planner is empty and I struggle to make it through more than a couple pages in the book before getting distracted. I have started other habits, like this blog, so I hope this isn't mistaken for a claim that the whole enterprise has been in vain. Now, hopefully, it's just be a matter of continuing to do the work. To taking small steps towards starting new habits each day.
 
 <aside>
-  <h6>Today's <a href="/blog/19/06/refining-questions/">questions</a>:</h6>
+  <h6>Today's <a href="/blog/19/06/refining-questions/">Questions</a>:</h6>
   <ul>
     <li>How can I encourage myself to take a small step towards something new each day?</li>
     <li>Should I table my current book to read <a href="https://designingyour.life/the-book/">something</a> <a href="https://www.nytimes.com/2019/04/30/books/review/jenny-odell-how-to-do-nothing.html">else</a>?</li>

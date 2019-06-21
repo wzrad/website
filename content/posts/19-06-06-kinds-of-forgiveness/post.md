@@ -12,7 +12,7 @@ It seems like there are lot of ways to get there, though. Immediately "letting g
 I'm consistently surprised by how much letting go of my body and sinking into a few tufts of grass does for my state-of-mind.
 
 <aside>
-  <h6>Today's <a href="/blog/19/06/refining-questions/">questions</a>:</h6>
+  <h6>Today's <a href="/blog/19/06/refining-questions/">Questions</a>:</h6>
   <ul>
     <li>How do I want to feel, and how do I get there?</li>
   </ul>
