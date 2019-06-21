@@ -11,8 +11,10 @@ Mumsey is a dog. An adorable Boston Terrier. The first time we met was at a part
 
 The three of them now live out on a farm in Michigan, and I've never seen Mumsey so happy as when she's running around her new home. If I were to characterize Mumsey in a word, it would be "motion". She's _always_ moving; she may be part shark. Initally, I wanted to try to create an animation capturing our first meeting, but I don't have a strong enough grasp on dog anatomy (or animation) to make that happen (yet). Instead I made a single image. It may look more like an awkward [paso doble](https://www.youtube.com/watch?v=UUO5WPaIr-s#t=1m54s), but I had to try to represent Mumsey in-flight:
 
-- ![Mumsey Jumping](./mumsey-1.jpg)
-- ![Mumsey Portrait](./mumsey-2.jpg)
+<p class="image-grid"/>
+
+![Mumsey Jumping](./mumsey-1.jpg)
+![Mumsey Portrait](./mumsey-2.jpg)
 
 That drawing is on a sketchbook page and hard to hand someone. I wanted to make something on proper paper that I could give to Kim & Wes, so I also did a portrait on Mumsey in a medium and style I'm more comfortable with.
 

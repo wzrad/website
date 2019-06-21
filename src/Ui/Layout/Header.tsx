@@ -84,19 +84,19 @@ const kStyles = (() => {
       align-items: center;
       margin-left: ${S.kSpacing4};
 
-      input[id="menu"] {
+      > input[id="menu"] {
         display: none;
       }
 
-      input[id="menu"]:checked ~ label {
+      > input[id="menu"]:checked ~ label {
         color: ${S.kColorSecondary};
       }
 
-      nav {
+      > nav {
         ${hidden}
       }
 
-      input[id="menu"]:checked ~ nav {
+      > input[id="menu"]:checked ~ nav {
         ${visible}
         animation-iteration-count: 0;
       }

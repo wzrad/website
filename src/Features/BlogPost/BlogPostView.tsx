@@ -50,13 +50,19 @@ const kStyles = {
       }
     }
 
-    > ul {
+    > .image-grid {
+      display: none;
+    }
+
+    > .image-grid + p {
       display: flex;
+      justify-content: space-evenly;
       margin-top: ${S.kSpacing3};
       margin-bottom: ${S.kSpacing3};
 
-      li {
+      > span {
         flex: 1;
+        margin: 0 !important;
       }
     }
 
