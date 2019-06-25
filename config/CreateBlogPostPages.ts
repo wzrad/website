@@ -15,9 +15,6 @@ export const CreateBlogPostPages: GatsbyNode = {
         basePath: "content/posts"
       })
 
-      console.log(path)
-      console.log(path.slice(10, -6))
-
       const slug = resolve(
         "/blog",
         path.slice(1, 3), // year

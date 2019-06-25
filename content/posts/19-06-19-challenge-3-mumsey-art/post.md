@@ -3,7 +3,7 @@ title: "Challenge #3 (Mumsey Art)"
 date: "2019-06-19"
 ---
 
-[Challenge](/blog/19/06/challenges/) #3 was given to me by my friend, Kim Kocek (thanks Kim!) (alternate title, "The Mumsey-m"):
+[Challenge](/blog/19/06/challenges/) #3 was given to me by my friend, Kim Swinehart (thanks Kim!) (alternate title, "The Mumsey-m"):
 
 > Use any medium to create a piece of art in the likeness of Mumsey.
 

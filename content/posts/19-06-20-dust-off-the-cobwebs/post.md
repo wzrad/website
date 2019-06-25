@@ -18,7 +18,7 @@ I want to help change this conversation. I want to raise awareness around the im
   <ul>
     <li><a href="https://www.theverge.com/2019/6/19/18681845/facebook-moderator-interviews-video-trauma-ptsd-cognizant-tampa">The Verge - Bodies in Seats <em>(warning, horrors)</em></a></li>
     <li><a href="http://www.jamesbridle.com">James Bridle</a> - <a href="https://medium.com/@jamesbridle/something-is-wrong-on-the-internet-c39c471271d2">Something is wrong on the internet <em>(warning, horrors)</em></a></li>
-    <li><a href="https://www.twitterandteargas.org">Zeynep Tufecki</a> - <a href="https://www.wired.com/story/how-recommendation-algorithms-run-the-world/">How Algorithms Run the World</a>
+    <li><a href="https://www.twitterandteargas.org">Zeynep Tufecki</a> - <a href="https://www.wired.com/story/how-recommendation-algorithms-run-the-world/">How Algorithms Run the World</a></li>
   </ul>
 </aside>
 
