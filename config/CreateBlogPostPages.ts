@@ -4,13 +4,23 @@ import { resolve } from "path"
 import { IPageContext } from "../src/Scenes/ShowBlogPost/ShowBlogPost"
 
 // -- types --
-interface BlogPost {
+export interface IBlogPost {
   frontmatter: {
     title: string
+    series: string | null
   }
   fields: {
     slug: string
   }
+}
+
+export interface IBlogPostSeries {
+  posts: IBlogPost[]
+  index: number
+}
+
+export interface IBlogPostSeriesRepo {
+  [key: string]: IBlogPostSeries | null
 }
 
 // -- impls --
@@ -52,6 +62,7 @@ export const CreateBlogPostPages: GatsbyNode = {
           nodes {
             frontmatter {
               title
+              series
             }
             fields {
               slug
@@ -61,21 +72,38 @@ export const CreateBlogPostPages: GatsbyNode = {
       }
     `)
 
+    // grab all the posts
+    const posts: [IBlogPost] = result.data.allMarkdownRemark.nodes
+
+    // collect posts into series
+    const seriesRepo: IBlogPostSeriesRepo = {}
+    for (const post of posts) {
+      addPostToSeries(seriesRepo, post)
+    }
+
     // create a page from each one
-    const nodes: [BlogPost] = result.data.allMarkdownRemark.nodes
-
-    for (const [index, node] of nodes.entries()) {
-      const prev: BlogPost | null = nodes[index - 1]
-      const next: BlogPost | null = nodes[index + 1]
-
+    for (const [index, post] of posts.entries()) {
+      // create context
       const context: IPageContext = {
-        slug: node.fields.slug,
-        prev: createPageLink(prev),
-        next: createPageLink(next)
+        slug: post.fields.slug,
+        posts: {
+          global: {
+            prev: createPostLink(posts[index - 1]),
+            next: createPostLink(posts[index + 1])
+          },
+          series: {
+            prev: createPostLink(findPrevPostInSeries(seriesRepo, post)),
+            next: createPostLink(findNextPostInSeries(seriesRepo, post))
+          }
+        }
       }
 
+      // advance series
+      advanceSeriesByPost(seriesRepo, post)
+
+      // create page
       actions.createPage({
-        path: node.fields.slug,
+        path: post.fields.slug,
         component: resolve("./src/Scenes/ShowBlogPost/PageTemplate.tsx"),
         context: (context as unknown) as Record<string, unknown>
       })
@@ -84,7 +112,7 @@ export const CreateBlogPostPages: GatsbyNode = {
 }
 
 // -- impls/context
-function createPageLink(post: BlogPost | null) {
+function createPostLink(post: IBlogPost | null) {
   if (post == null) {
     return null
   }
@@ -93,4 +121,62 @@ function createPageLink(post: BlogPost | null) {
     slug: post.fields.slug,
     title: post.frontmatter.title
   }
+}
+
+// -- impls/series/commands
+function addPostToSeries(repo: IBlogPostSeriesRepo, post: IBlogPost) {
+  const key = getKeyFromPost(post)
+  if (key == null) {
+    return
+  }
+
+  const series = repo[key]
+  if (series != null) {
+    series.posts.push(post)
+  } else {
+    repo[key] = {
+      posts: [post],
+      index: 0
+    }
+  }
+}
+
+function advanceSeriesByPost(repo: IBlogPostSeriesRepo, post: IBlogPost) {
+  const series = findSeriesByPost(repo, post)
+  if (series != null) {
+    series.index += 1
+  }
+}
+
+// -- impls/series/queries
+function findSeriesByPost(
+  repo: IBlogPostSeriesRepo,
+  post: IBlogPost
+): IBlogPostSeries | null {
+  const key = getKeyFromPost(post)
+  if (key == null) {
+    return null
+  }
+
+  return repo[key]
+}
+
+function findPrevPostInSeries(
+  repo: IBlogPostSeriesRepo,
+  post: IBlogPost
+): IBlogPost | null {
+  const series = findSeriesByPost(repo, post)
+  return series && series.posts[series.index - 1]
+}
+
+function findNextPostInSeries(
+  repo: IBlogPostSeriesRepo,
+  post: IBlogPost
+): IBlogPost | null {
+  const series = findSeriesByPost(repo, post)
+  return series && series.posts[series.index + 1]
+}
+
+function getKeyFromPost(post: IBlogPost): string | null {
+  return post.frontmatter.series
 }
