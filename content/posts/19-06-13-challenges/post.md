@@ -1,6 +1,7 @@
 ---
 title: "Challenges"
 date: "2019-06-13"
+series: "Challenges"
 ---
 
 As part of my time off from work, my partner generously solicited and organized over 30 "adventure challenges" from my friends and family to push me to be uncomfortable, try new things, and challenge myself. Ideally, something that could be completed in a day.

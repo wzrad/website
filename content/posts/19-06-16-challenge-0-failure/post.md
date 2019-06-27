@@ -1,6 +1,7 @@
 ---
 title: "Challenge #0 (Failure)"
 date: "2019-06-16"
+series: "Challenges"
 ---
 
 [Challenge](/blog/19/06/challenges/) #1 (post forthcoming) is upon me, and I've faceplanted pretty hard. I realized that I have some personal demons to overcome that are making it exceptionally difficult.

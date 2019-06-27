@@ -1,6 +1,7 @@
 ---
 title: "Better Ways of Working"
 date: "2019-06-21"
+series: "Better Ways of Working"
 ---
 
 I want to start a series of posts about what I imagine is an ideal work environment, at least for software companies. At the core of this ideal is equal ownership. By virtue of being part of the organization, each person has a roughly equal stake (e.g. at most someone might own 1.3 shares), and the company's revenues are divided accordingly. I suspect that such a model can triage some of the corrosive forces that plague many workplaces: centralized authority, intra-office competition, poor hiring decisions, growth-fixation, an inability to properly value/recognize others' work, etc. I also just think it's a fairer way to distribute an organization's profits.

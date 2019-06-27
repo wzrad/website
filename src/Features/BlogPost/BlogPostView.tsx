@@ -50,6 +50,10 @@ const kStyles = {
       margin-top: ${S.kSpacing4};
     }
 
+    > ul {
+      list-style-type: circle;
+    }
+
     > .image-grid {
       display: none;
     }

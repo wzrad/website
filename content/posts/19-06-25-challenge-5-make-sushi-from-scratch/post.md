@@ -1,6 +1,7 @@
 ---
 title: "Challenge #5 (Make Sushi From Scratch)"
 date: "2019-06-25"
+series: "Challenges"
 ---
 
 [Challenge](/blog/19/06/challenges/) #5 was given to me by my friend, Anna Brenner (thanks Anna!):
