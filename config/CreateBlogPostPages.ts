@@ -1,8 +1,20 @@
 import { GatsbyNode } from "gatsby"
 import { createFilePath } from "gatsby-source-filesystem"
 import { resolve } from "path"
+import { IPageContext } from "../src/Scenes/ShowBlogPost/ShowBlogPost"
+
+// -- types --
+interface BlogPost {
+  frontmatter: {
+    title: string
+  }
+  fields: {
+    slug: string
+  }
+}
 
 // -- impls --
+// -- impls/plugin
 export const CreateBlogPostPages: GatsbyNode = {
   // add a url slug to every blog post data node
   onCreateNode({ node, getNode, actions }) {
@@ -36,8 +48,11 @@ export const CreateBlogPostPages: GatsbyNode = {
     // fetch all the posts
     const result = await graphql(`
       query CreatePagesQuery {
-        allMarkdownRemark {
+        allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
           nodes {
+            frontmatter {
+              title
+            }
             fields {
               slug
             }
@@ -47,14 +62,35 @@ export const CreateBlogPostPages: GatsbyNode = {
     `)
 
     // create a page from each one
-    for (const node of result.data.allMarkdownRemark.nodes) {
+    const nodes: [BlogPost] = result.data.allMarkdownRemark.nodes
+
+    for (const [index, node] of nodes.entries()) {
+      const prev: BlogPost | null = nodes[index - 1]
+      const next: BlogPost | null = nodes[index + 1]
+
+      const context: IPageContext = {
+        slug: node.fields.slug,
+        prev: createPageLink(prev),
+        next: createPageLink(next)
+      }
+
       actions.createPage({
         path: node.fields.slug,
         component: resolve("./src/Scenes/ShowBlogPost/PageTemplate.tsx"),
-        context: {
-          slug: node.fields.slug
-        }
+        context: (context as unknown) as Record<string, unknown>
       })
     }
+  }
+}
+
+// -- impls/context
+function createPageLink(post: BlogPost | null) {
+  if (post == null) {
+    return null
+  }
+
+  return {
+    slug: post.fields.slug,
+    title: post.frontmatter.title
   }
 }

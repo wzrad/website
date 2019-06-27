@@ -44,15 +44,28 @@ s/dev:
 	$(tools-gatsby) develop
 .PHONY: s/dev
 
+## starts the dev server after a clean
+s/dev/clean: b/clean s/dev
+.PHONY: s/dev/clean
+
 ## starts the prod server
 s/prod: b/prod
 	$(tools-gatsby) serve
 .PHONY: s/prod
 
+## starts the prod server after a clean
+s/prod/clean: b/clean s/prod
+.PHONY: s/prod/clean
+
 # -- build --
 ## alias for b/prod
 build: b/prod
 .PHONY: build
+
+## cleans the build cache
+b/clean:
+	rm -rf public && rm -rf .cache
+.PHONY: b/clean
 
 # -- build/prod
 ## builds the prod site
