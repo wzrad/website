@@ -2,8 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Layout } from "@/Ui/Layout"
 import { BlogPostView } from "@/Features/BlogPost"
+import { RelatedPostLinksView } from "./RelatedPostLinksView"
 import { ShowBlogPostQuery } from "./__generated__/ShowBlogPostQuery"
-import { BlogPostLinksView } from "./BlogPostLinksView"
 
 // -- types --
 export interface IProps {
@@ -32,7 +32,7 @@ export function ShowBlogPost({ data, pageContext: context }: IProps) {
   return (
     <Layout>
       <BlogPostView post={data.post} />
-      <BlogPostLinksView prev={context.prev} next={context.next} />
+      <RelatedPostLinksView prev={context.prev} next={context.next} />
     </Layout>
   )
 }

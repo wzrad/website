@@ -7,6 +7,7 @@ export const kFontSize2 = "32px"
 export const kFontSize3 = "24px"
 export const kFontSize4 = "16px"
 export const kFontSize5 = "14px"
+export const kFontSize6 = "12px"
 
 // -- impls/fonts
 export const kFontRegular = css`
@@ -44,14 +45,20 @@ export const kTextSection = css`
   line-height: 1;
 `
 
+export const kTextNav = css`
+  ${kFontRegular};
+  font-size: ${kFontSize4};
+  line-height: 1;
+`
+
 export const kTextBody = css`
   ${kFontRegular};
   font-size: ${kFontSize5};
   line-height: 1.5;
 `
 
-export const kTextNav = css`
+export const kTextHint = css`
   ${kFontRegular};
-  font-size: ${kFontSize4};
+  font-size: ${kFontSize6};
   line-height: 1;
 `
