@@ -22,7 +22,7 @@ export const CreateBlogPostPages: GatsbyNode = {
         path.slice(10, -6) // name
       )
 
-      // add that slug to the data node as a field
+      // add a field for the slug to the remark node
       actions.createNodeField({
         node,
         name: "slug",
