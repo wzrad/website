@@ -1,6 +1,7 @@
 ---
 title: "Challenge #4 (Studio Visit)"
 date: "2019-06-22"
+series: "Challenges"
 ---
 
 [Challenge](/blog/19/06/challenges/) #4 was given to me by my friend, Aya Nakamura (thanks Aya!):

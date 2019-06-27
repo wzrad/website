@@ -1,6 +1,7 @@
 ---
 title: "Challenge #2 (Solo Yoga)"
 date: "2019-06-18"
+series: "Challenges"
 ---
 
 [Challenge](/blog/19/06/challenges/) #2 was given to me by my partner, Janice Cho (arguably, she also gave me challenge [#0](/blog/19/06/challenge-0/) by orchaestrating this whole endeavor):
