@@ -2,12 +2,12 @@ import { css } from "@emotion/core"
 
 // -- impls --
 // -- impls/sizes
-export const kFontSize1 = "42px"
-export const kFontSize2 = "32px"
-export const kFontSize3 = "24px"
-export const kFontSize4 = "16px"
-export const kFontSize5 = "14px"
-export const kFontSize6 = "12px"
+export const kFontSize1 = "46px"
+export const kFontSize2 = "36px"
+export const kFontSize3 = "26px"
+export const kFontSize4 = "18px"
+export const kFontSize5 = "16px"
+export const kFontSize6 = "14px"
 
 // -- impls/fonts
 export const kFontRegular = css`
