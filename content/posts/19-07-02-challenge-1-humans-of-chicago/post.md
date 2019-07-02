@@ -1,9 +1,9 @@
 ---
-title: "Humans of Chicago"
+title: "Challenge #1 (Humans of Chicago)"
 date: "2019-07-02"
 ---
 
-[Challenge](/blog/19/06/challenges/) #5 was given to me by my friend, AJ Misterka (AJ!).
+[Challenge](/blog/19/06/challenges/) #1 was given to me by my friend, AJ Misterka (AJ!).
 
 > Find 3 people (one must be a senior citizen) and interview for a quote or short story about their live. Like a "Humans of New York" thing.
 
