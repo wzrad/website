@@ -50,8 +50,20 @@ const kStyles = {
       margin-top: ${S.kSpacing4};
     }
 
-    > ul {
-      list-style-type: circle;
+    > ul > li {
+      position: relative;
+      padding-left: ${S.kSpacing3};
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        top: 8px;
+        left: 0;
+        border: 1px solid ${S.kColorBlack};
+        border-radius: 6px;
+      }
     }
 
     > .image-grid {

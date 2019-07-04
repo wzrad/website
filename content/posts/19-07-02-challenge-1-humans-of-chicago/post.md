@@ -1,7 +1,7 @@
 ---
 title: "Challenge #1 (Humans of Chicago)"
 date: "2019-07-02"
-series: Challenges
+series: "Challenges"
 ---
 
 [Challenge](/blog/19/06/challenges/) #1 was given to me by my friend, Adrianna Misterka (thanks Adrianna!).
@@ -27,3 +27,11 @@ We don't know who lives in our neighborhood, so we're more afraid to walk around
 However, I'm optimistic about the potential of in-person community organizations to slowly roll the boulder back up the hill. When I mentioned that this challenge has focused my own direction and sense of purpose, this is that direction. Participation. By joining the organizations near me (like the [LSNA](http://www.lsna.net)) trying to build an inclusive neighborhood and by tirelessly connecting with people to develop our shared neighborhood identity. My hope is twofold. First, that I can help tackle these problems where I have the best chance for effect, and second that by strengthening such organizations we'll have the framework to work with other similar organizations on broader, more challenging problems. And so on and so forth.
 
 [My friend Chase](19/06/my-friend-chase) always said to me that he thought local politics were the highest-impact outlet for our political energy. I wrote it off at the time, but I think, now, that he was dead on.
+
+<aside>
+  <h6><em>Today's <a href="/blog/19/06/refining-questions/">Questions</a>:</em></h6>
+  <ul>
+    <li>How can we connect neighborhoods to one another?</li>
+    <li>Why does it so often take personal experience to unlock an understanding?</li>
+  </ul>
+</aside>
