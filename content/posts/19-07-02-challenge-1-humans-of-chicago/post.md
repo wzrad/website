@@ -32,6 +32,6 @@ However, I'm optimistic about the potential of in-person community organizations
   <h6><em>Today's <a href="/blog/19/06/refining-questions/">Questions</a>:</em></h6>
   <ul>
     <li>How can we connect neighborhoods to one another?</li>
-    <li>Why does it so often take personal experience to unlock an understanding?</li>
+    <li>Why is personal experience so often the key to unlock understanding?</li>
   </ul>
 </aside>
