@@ -13,6 +13,6 @@ Unsurprisingly, starting all those habits was harder than I thought. Many of my 
   <h6>Today's <a href="/blog/19/06/refining-questions/">Questions</a>:</h6>
   <ul>
     <li>How can I encourage myself to take a small step towards something new each day?</li>
-    <li>Should I table my current book to read <a href="https://designingyour.life/the-book/">something</a> <a href="https://www.nytimes.com/2019/04/30/books/review/jenny-odell-how-to-do-nothing.html">else</a>?</li>
+    <li>Should I table my current book to read <a href="https://www.worldcat.org/title/designing-your-life-how-to-build-a-well-lived-joyful-life/oclc/1000612494">something</a> <a href="https://www.worldcat.org/title/how-to-do-nothing-resisting-the-attention-economy/oclc/1085144412">else</a>?</li>
   </ul>
 </aside>
