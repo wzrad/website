@@ -1,7 +1,7 @@
 ---
 title: "Challenge #6 (Experiencing Wealth)"
 date: "2019-07-18"
-series: "Book Review"
+series: "Challenges"
 ---
 
 [Challenge](/blog/19/06/challenges/) #6 was given to me by my friend, Adam Selzer (thanks Adam!).
