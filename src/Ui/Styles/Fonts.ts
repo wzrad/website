@@ -21,6 +21,11 @@ export const kFontRegularItalic = css`
   font-style: italic;
 `
 
+export const kFontMedium = css`
+  font-family: system-ui, sans-serif;
+  font-weight: 500;
+`
+
 export const kFontMediumSerif = css`
   font-family: Eczar, Georgia, serif;
   font-weight: 500;

@@ -62,7 +62,7 @@ const kStyles = (() => {
   `
 
   const visible = css`
-    left: ${S.kSpacing4};
+    left: ${S.kSpacing5};
     opacity: 1;
     pointer-events: auto;
   `
@@ -82,7 +82,7 @@ const kStyles = (() => {
       position: relative;
       display: flex;
       align-items: center;
-      margin-left: ${S.kSpacing4};
+      margin-left: ${S.kSpacing5};
 
       > input[id="menu"] {
         display: none;
@@ -131,7 +131,7 @@ const kStyles = (() => {
       transition: opacity 0.2s, left 0.2s;
 
       > a + a {
-        margin-left: ${S.kSpacing4};
+        margin-left: ${S.kSpacing5};
       }
     `,
     menuNavPeek: css`

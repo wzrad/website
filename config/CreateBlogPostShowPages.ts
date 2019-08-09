@@ -3,6 +3,9 @@ import { createFilePath } from "gatsby-source-filesystem"
 import { resolve } from "path"
 import { IPageContext } from "../src/Scenes/ShowBlogPost/ShowBlogPost"
 
+// -- constants --
+const kTemplate = "./src/Scenes/ShowBlogPost/__Template.tsx"
+
 // -- types --
 interface BlogPost {
   frontmatter: {
@@ -15,7 +18,7 @@ interface BlogPost {
 
 // -- impls --
 // -- impls/plugin
-export const CreateBlogPostPages: GatsbyNode = {
+export const CreateBlogPostShowPages: GatsbyNode = {
   // add a url slug to every blog post data node
   onCreateNode({ node, getNode, actions }) {
     // if this is a blog post
@@ -47,7 +50,7 @@ export const CreateBlogPostPages: GatsbyNode = {
   async createPages({ graphql, actions }) {
     // fetch all the posts
     const result = await graphql(`
-      query CreatePagesQuery {
+      query CreateBlogPostDetailPagesQuery {
         allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
           nodes {
             frontmatter {
@@ -62,21 +65,23 @@ export const CreateBlogPostPages: GatsbyNode = {
     `)
 
     // create a page from each one
-    const nodes: [BlogPost] = result.data.allMarkdownRemark.nodes
+    const nodes: BlogPost[] = result.data.allMarkdownRemark.nodes
 
     for (const [index, node] of nodes.entries()) {
-      const prev: BlogPost | null = nodes[index - 1]
-      const next: BlogPost | null = nodes[index + 1]
+      const prev = nodes[index - 1]
+      const next = nodes[index + 1]
 
       const context: IPageContext = {
         slug: node.fields.slug,
-        prev: createPageLink(prev),
-        next: createPageLink(next)
+        relatedPosts: {
+          prev: createPageLink(prev),
+          next: createPageLink(next)
+        }
       }
 
       actions.createPage({
         path: node.fields.slug,
-        component: resolve("./src/Scenes/ShowBlogPost/PageTemplate.tsx"),
+        component: resolve(kTemplate),
         context: (context as unknown) as Record<string, unknown>
       })
     }

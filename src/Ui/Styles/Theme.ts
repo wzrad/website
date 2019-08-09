@@ -26,6 +26,7 @@ export const kTheme = css`
   a {
     cursor: pointer;
     text-decoration-color: ${kColorPrimary};
+    text-decoration-thickness: 2px;
   }
 
   a:hover {

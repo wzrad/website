@@ -12,9 +12,9 @@ Classification is a necessary tool. It's impossible to understand anything witho
 
 Any classification necessarily begets division. In workplaces, specifically, I think that many commonly implemented classifications fail one or both essentiality tests, and the divisions they sow have a destructive effect on our ability to work effectively. I have, for example, observed division by compensation, by present skillset, by tenure, by discipline (design/development/management/etc), by perceived value all have what I consider to be negative effects on both individual well-being and labor organization. I'll expand on these examples in the next post. Essential vs. incidental is one way to classify classifiers in the workplace, but I think there are a few other useful meta-classifiers:
 
-- Temporary vs. Permanent\
+- **Temporary vs. Permanent**\
   Can the classification change over time or is it permanent
-- Contextual vs. Ubiquitous\
+- **Contextual vs. Ubiquitous**\
   Is the classification used only in certain contexts or always
 
 I think striving to eliminate incidental divisions is a goal worth striving for. They produce distributions of power and authority that will feel unfair to some of us, reduce morale, and ultimately lead to burnout. When they're implicit or unspoken, they construct unnecessary barriers to communication and collaboration that results in lost information, reduced work quality, or even project failure. Dispensing with any concern for productivity, they can become internalized but unfelt components of our identities, causing cognitive dissonance and psychological pain. Organiztional policy determinining or designing any component of someone's identity is illiberal and wrong. Incidental divisions are toxic for a whole host of reasons.

@@ -64,7 +64,7 @@ build: b/prod
 
 ## cleans the build cache
 b/clean:
-	rm -rf public && rm -rf .cache
+	$(tools-gatsby) clean
 .PHONY: b/clean
 
 # -- build/prod

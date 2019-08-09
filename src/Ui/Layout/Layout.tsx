@@ -44,6 +44,18 @@ export function Layout({ children }: IProps) {
 // -- styles --
 const kStyles = {
   main: css`
+    position: relative;
     padding: ${S.kSpacing1};
+    max-width: 780px;
+
+    &:before {
+      content: "";
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 6px;
+      height: 100vh;
+      background-color: ${S.kColorSecondary};
+    }
   `
 }

@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Layout } from "@/Ui/Layout"
 import { BlogPostView } from "@/Features/BlogPost"
-import { RelatedPostLinksView } from "./RelatedPostLinksView"
+import { RelatedPostsView } from "./RelatedPostsView"
 import { ShowBlogPostQuery } from "./__generated__/ShowBlogPostQuery"
 
 // -- types --
@@ -13,8 +13,10 @@ export interface IProps {
 
 export interface IPageContext {
   slug: string
-  prev: IPageLink | null
-  next: IPageLink | null
+  relatedPosts: {
+    prev: IPageLink | null
+    next: IPageLink | null
+  }
 }
 
 export interface IPageLink {
@@ -32,7 +34,7 @@ export function ShowBlogPost({ data, pageContext: context }: IProps) {
   return (
     <Layout>
       <BlogPostView post={data.post} />
-      <RelatedPostLinksView prev={context.prev} next={context.next} />
+      <RelatedPostsView {...context.relatedPosts} />
     </Layout>
   )
 }

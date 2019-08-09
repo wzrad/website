@@ -8,7 +8,7 @@ import { Layout } from "@/Ui/Layout"
 export function ShowAbout() {
   return (
     <Layout>
-      <section css={kStyles.about}>
+      <section>
         <div css={kStyles.info}>
           <h1>About</h1>
           <p>
@@ -44,23 +44,20 @@ export function ShowAbout() {
 
 // -- styles --
 const kStyles = {
-  about: css`
-    max-width: 700px;
-  `,
   info: css`
     margin-bottom: ${S.kSpacing2};
 
     > h1 {
-      margin-bottom: ${S.kSpacing4};
+      margin-bottom: ${S.kSpacing5};
     }
   `,
   contacts: css`
     > h2 {
-      margin-bottom: ${S.kSpacing4};
+      margin-bottom: ${S.kSpacing5};
     }
 
     > p {
-      margin-bottom: ${S.kSpacing4};
+      margin-bottom: ${S.kSpacing5};
     }
 
     > ul {

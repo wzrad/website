@@ -15,7 +15,7 @@ interface IRelatedPostLink {
 }
 
 // -- impls --
-export function RelatedPostLinksView({ prev, next }: IProps) {
+export function RelatedPostsView({ prev, next }: IProps) {
   return (
     <nav css={kStyles.posts}>
       <h2>Related Posts</h2>
@@ -40,14 +40,13 @@ export function RelatedPostLinksView({ prev, next }: IProps) {
 // -- styles --
 export const kStyles = {
   posts: css`
-    max-width: 700px;
     margin-top: ${S.kSpacing3};
   `,
   links: css`
-    margin-top: ${S.kSpacing4};
+    margin-top: ${S.kSpacing5};
 
     > * + * {
-      margin-top: ${S.kSpacing4};
+      margin-top: ${S.kSpacing5};
     }
   `,
   link: css`

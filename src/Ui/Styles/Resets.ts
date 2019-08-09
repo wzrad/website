@@ -47,6 +47,12 @@ export const kResets= css`
     content: none;
   }
 
+  hr {
+    margin: 0;
+    border: 0px solid black;
+    border-top-width: 1px;
+  }
+
   table {
     border-collapse: collapse;
     border-spacing: 0;
