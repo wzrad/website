@@ -7,6 +7,12 @@ import { IPageContext } from "../src/Scenes/ShowBlogPost/ShowBlogPost"
 const kTemplate = "./src/Scenes/ShowBlogPost/__Template.tsx"
 
 // -- types --
+interface BlogPostQueryData {
+  allMarkdownRemark: {
+    nodes: BlogPost[]
+  }
+}
+
 interface BlogPost {
   frontmatter: {
     title: string
@@ -48,9 +54,8 @@ export const CreateBlogPostShowPages: GatsbyNode = {
 
   // create pages from each blog post
   async createPages({ graphql, actions }) {
-    // fetch all the posts
-    const result = await graphql(`
-      query CreateBlogPostDetailPagesQuery {
+    const query = `
+      query CreateBlogPostShowPagesQuery {
         allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
           nodes {
             frontmatter {
@@ -62,27 +67,34 @@ export const CreateBlogPostShowPages: GatsbyNode = {
           }
         }
       }
-    `)
+    `
 
-    // create a page from each one
-    const nodes: BlogPost[] = result.data.allMarkdownRemark.nodes
+    // fetch all the posts
+    const result = await graphql<BlogPostQueryData>(query)
+    if (result.data == null) {
+      throw new Error(`failed to fetch posts:\n${result.errors}`)
+    }
 
-    for (const [index, node] of nodes.entries()) {
-      const prev = nodes[index - 1]
-      const next = nodes[index + 1]
+    // create a show page for each post
+    const posts = result.data.allMarkdownRemark.nodes
+    const component = resolve(kTemplate)
 
-      const context: IPageContext = {
-        slug: node.fields.slug,
-        relatedPosts: {
-          prev: createPageLink(prev),
-          next: createPageLink(next)
+    for (const [index, post] of posts.entries()) {
+      const prev = posts[index - 1]
+      const next = posts[index + 1]
+
+      actions.createPage<IPageContext>({
+        path: post.fields.slug,
+        component,
+        context: {
+          // specify graphql query variables
+          slug: post.fields.slug,
+          // add links to related posts
+          relatedPosts: {
+            prev: createPageLink(prev),
+            next: createPageLink(next)
+          }
         }
-      }
-
-      actions.createPage({
-        path: node.fields.slug,
-        component: resolve(kTemplate),
-        context: (context as unknown) as Record<string, unknown>
       })
     }
   }
