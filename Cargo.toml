@@ -1,0 +1,17 @@
+[package]
+name = "compile"
+version = "0.1.0"
+authors = ["Ty Cobb <me@tycobb.club>"]
+edition = "2018"
+
+[lib]
+name = "compile"
+path = "compile/lib.rs"
+crate-type = ["lib"]
+
+[[bin]]
+name = "compile"
+path = "compile/main.rs"
+
+[dependencies]
+thiserror = "1.0"

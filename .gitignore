@@ -1,10 +1,5 @@
 # logs
 *.log
 
-# js
-node_modules/
-
-# gatsby
-.cache/
-dist
-public
+# rust
+target/
