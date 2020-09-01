@@ -1,5 +1,11 @@
-use compile as c;
+use compile::Site;
 
 fn main() {
-    c::compile();
+    let site = Site::new();
+
+    if let Err(error) = site.compile() {
+        println!("{}", error)
+    } else {
+        println!("site built in 0.01s.")
+    }
 }

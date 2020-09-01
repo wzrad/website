@@ -1,5 +1,8 @@
-# logs
+# -- misc --
 *.log
 
-# rust
+# -- rust --
 target/
+
+# -- site --
+public/

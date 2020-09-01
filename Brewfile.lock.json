@@ -1,0 +1,43 @@
+{
+  "entries": {
+    "brew": {
+      "webfs": {
+        "version": "1.21_1",
+        "bottle": {
+          "cellar": ":any",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/webfs-1.21_1.catalina.bottle.1.tar.gz",
+              "sha256": "192b771c2cf819773c9581bcdc83dacb9954c241ab41837ff844f736a53d5a1e"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/webfs-1.21_1.mojave.bottle.1.tar.gz",
+              "sha256": "f561f9dac64cd43165eefd01619d54042507a4f9a1d572c621e17229b63ec045"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/webfs-1.21_1.high_sierra.bottle.1.tar.gz",
+              "sha256": "52608c9f1bd5d7e7fceec24bff51ca67e0739b1c83ae2676c6ca161fdfaaa4d7"
+            },
+            "sierra": {
+              "url": "https://homebrew.bintray.com/bottles/webfs-1.21_1.sierra.bottle.1.tar.gz",
+              "sha256": "9e678532e4546e4fabb9a96b9eb141769e00e330e15c9e5b453001141448c9fb"
+            }
+          }
+        }
+      }
+    }
+  },
+  "system": {
+    "macos": {
+      "catalina": {
+        "HOMEBREW_VERSION": "2.4.16",
+        "HOMEBREW_PREFIX": "/usr/local",
+        "Homebrew/homebrew-core": "4aecf474e8607606560e3f54ce2d9e4996e3cead",
+        "CLT": "1103.0.32.62",
+        "Xcode": "11.5",
+        "macOS": "10.15.5"
+      }
+    }
+  }
+}
