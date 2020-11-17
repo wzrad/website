@@ -38,9 +38,9 @@ b:
 	$(tools-cargo) build
 .PHONY: b
 
-# -- generate --
+# -- gen --
 ## generate the site
-generate: g
+gen: g
 .PHONY: gen
 
 g:

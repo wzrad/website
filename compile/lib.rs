@@ -1,6 +1,7 @@
+// -- deps --
+extern crate nom;
+
+// -- modules --
 pub mod site;
 pub use site::Site;
-
-pub fn compile() {
-    println!("hello, world.")
-}
+pub mod posts;
