@@ -6,20 +6,67 @@ use nom::combinator as c;
 use nom::sequence as s;
 use nom::character as b;
 
+// -- types --
+#[derive(PartialEq, Debug)]
+struct Post<'a> {
+    pub headers: Vec<Header<'a>>,
+    pub body: Vec<Text<'a>>,
+}
+
+#[derive(PartialEq, Debug)]
+struct Header<'a> {
+    pub key: &'a str,
+    pub val: &'a str,
+}
+
+#[derive(PartialEq, Debug)]
+struct Text<'a> {
+    pub val: &'a str,
+}
+
 // -- impls --
-fn headers(i: &[u8]) -> n::IResult<&[u8], Vec<(&str, &str)>> {
+impl<'a> Post<'a> {
+    fn new(elements: (Vec<Header<'a>>, Vec<Text<'a>>)) -> Post<'a> {
+        return Post {
+            headers: elements.0,
+            body: elements.1,
+        };
+    }
+}
+
+fn post<'a>() -> impl FnMut(&'a [u8]) -> n::IResult<&'a [u8], Post<'a>> {
+    return c::map(
+        s::pair(
+            headers(),
+            body(),
+        ),
+        Post::new,
+    );
+}
+
+// -- impls/headers
+impl<'a> Header<'a> {
+    fn new(pair: (&'a str, &'a str)) -> Header<'a> {
+        return Header { key: pair.0, val: pair.1 };
+    }
+}
+
+fn headers<'a>() -> impl FnMut(&'a [u8]) -> n::IResult<&'a [u8], Vec<Header<'a>>> {
     return s::delimited(
         tag_rule(),
         m::many0(header()),
         tag_rule(),
-    )(i);
+    );
 }
 
-fn header<'a>() -> impl FnMut(&'a [u8]) -> n::IResult<&'a [u8], (&'a str, &'a str)> {
+fn header<'a>() -> impl FnMut(&'a [u8]) -> n::IResult<&'a [u8], Header<'a>> {
     return s::terminated(
-        s::pair(
-            header_key(),
-            header_val()
+        c::map(
+            s::pair(
+                header_key(),
+                header_val()
+            ),
+            Header::new
         ),
         p::tag("\n")
     );
@@ -46,6 +93,30 @@ fn header_val<'a>() -> impl FnMut(&'a [u8]) -> n::IResult<&'a [u8], &'a str> {
     );
 }
 
+// -- impls/body
+impl<'a> Text<'a> {
+    fn new(val: &'a str) -> Text<'a> {
+        return Text { val };
+    }
+}
+
+fn body<'a>() -> impl FnMut(&'a [u8]) -> n::IResult<&'a [u8], Vec<Text<'a>>> {
+    return m::many0(
+        text(),
+    )
+}
+
+fn text<'a>() -> impl FnMut(&'a [u8]) -> n::IResult<&'a [u8], Text<'a>> {
+    return c::map(
+        c::map_res(
+            p::take_while1(|_| true),
+            std::str::from_utf8,
+        ),
+        Text::new,
+    );
+}
+
+// -- impls/primitives
 fn tag_rule<'a>() -> impl FnMut(&'a [u8]) -> n::IResult<&'a [u8], &'a [u8]> {
     return p::tag("---\n");
 }
@@ -54,33 +125,42 @@ fn tag_quote<'a>() -> impl FnMut(&'a [u8]) -> n::IResult<&'a [u8], &'a [u8]> {
     return p::tag("\"");
 }
 
+// -- impls/tests
 #[inline]
 pub fn is_not_quote(chr: u8) -> bool {
   return chr != b'"'
 }
 
+// -- tests --
 #[cfg(test)]
 mod tests {
     use super::*;
 
     // -- tests --
     #[test]
-    fn it_parses_the_headers() {
+    fn it_parses_the_post_headers() {
         let input = trim(r#"
 ---
 key1: "value1"
 key2: "value2"
 ---
 
-# body
+body
         "#);
 
         let rest = trim_end(r#"
-# body
         "#);
 
-        let res = headers(input);
-        assert_eq!(res, Ok((&rest[..], vec![("key1", "value1"), ("key2", "value2")])));
+        let post = post()(input);
+        assert_eq!(post, Ok((&rest[..], Post::new((
+            vec![
+                Header::new(("key1", "value1")),
+                Header::new(("key2", "value2")),
+            ],
+            vec![
+                Text::new("\nbody"),
+            ],
+        )))));
     }
 
     // -- helpers --
